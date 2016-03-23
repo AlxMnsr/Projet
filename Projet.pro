@@ -1,13 +1,11 @@
 SOURCES += \
     main.cpp \
-    fenetre.cpp \
-    qmlapplicationviewer.cpp
+    fenetre.cpp
 
 HEADERS += \
-    fenetre.h \
-    qmlapplicationviewer.h
+    fenetre.h
 
-QT+= widgets quickwidgets quick declarative
+QT+= widgets quickwidgets quick
 
-OTHER_FILES += \
-    qmlTest.qml
+DISTFILES += \
+    ../build-Projet-Desktop_Qt_5_5_1_MinGW_32bit-Debug/debug/main.qml

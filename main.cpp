@@ -1,20 +1,16 @@
 #include <QApplication>
-#include "Fenetre.h"
-#include "qmlapplicationviewer.h"
+#include <QQuickView>
+#include <QHBoxLayout>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    QmlApplicationViewer viewer;
+    QQuickView view;
 
-    viewer.setOrientation(QmlApplicationViewer::ScreenOrientationLockPortrait);
-    viewer.setMainQmlFile(QLatin1String("qml/main.qml"));
-    viewer.showExpanded();
+    view.setSource(QUrl::fromLocalFile("debug/main.qml"));
+    view.show();
 
-
-    //Fenetre fenetre;
-    //fenetre.show();
 
     return app.exec();
 }
